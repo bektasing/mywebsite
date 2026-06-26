@@ -16,6 +16,7 @@
   --accent-glow: rgba(110, 231, 183, 0.25);
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-hero: 'Syne', system-ui, sans-serif;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -102,10 +103,25 @@ img {
 }
 
 .nav__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  padding: 0 0.65rem;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.nav__logo:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
 }
 
 .nav__logo-dot {
@@ -228,11 +244,11 @@ img {
 }
 
 .hero__title {
-  font-family: var(--font-display);
+  font-family: var(--font-hero);
   font-size: clamp(2.8rem, 8vw, 5.5rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
 }
 
