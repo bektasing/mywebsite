@@ -69,6 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealEls.forEach((el) => observerReveal.observe(el));
 
+  // Expandable project cards
+  document.querySelectorAll('.project--expandable').forEach((project) => {
+    const closeBtn = project.querySelector('.project__close');
+
+    const setExpanded = (expanded) => {
+      project.classList.toggle('project--expanded', expanded);
+      project.setAttribute('aria-expanded', String(expanded));
+    };
+
+    project.addEventListener('click', (e) => {
+      if (e.target.closest('.project__close') || e.target.closest('a')) return;
+      setExpanded(!project.classList.contains('project--expanded'));
+    });
+
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setExpanded(false);
+    });
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {

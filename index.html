@@ -7,7 +7,7 @@
   <title>Hamza Bektaş | Kişisel Site</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -141,22 +141,97 @@
         </div>
 
         <div class="projects">
-          <article class="project reveal">
-            <div class="project__placeholder">
-              <span class="project__number">01</span>
-              <div class="project__skeleton">
-                <div class="project__skeleton-line project__skeleton-line--wide"></div>
-                <div class="project__skeleton-line"></div>
-                <div class="project__skeleton-line project__skeleton-line--short"></div>
+          <article class="project project--expandable reveal" aria-expanded="false">
+            <div class="project__main">
+              <div class="project__visual">
+                <div class="project__visual-inner project__visual-inner--chess">
+                  <div class="chess-mock">
+                    <div class="chess-mock__timer chess-mock__timer--white">
+                      <span>10:00</span>
+                    </div>
+                    <div class="chess-mock__divider"></div>
+                    <div class="chess-mock__timer chess-mock__timer--black">
+                      <span>10:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__status project__status--live">Tamamlandı</span>
+                <h3 class="project__title project__title--active">Satranç Saati (Chess Timer)</h3>
+                <p class="project__desc">
+                  Flutter ile kendimi geliştirmek için yazdığım, dairesel sayaç arayüzüne ve temel
+                  zaman ayarlarına sahip bir Android satranç saati uygulaması.
+                </p>
+                <div class="project__tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Android</span>
+                </div>
+                <p class="project__hint">
+                  <span class="project__hint-icon" aria-hidden="true">↓</span>
+                  Detaylar için tıkla
+                </p>
               </div>
             </div>
-            <div class="project__info">
-              <span class="project__status">Yakında</span>
-              <h3 class="project__title">Proje Başlığı</h3>
-              <p class="project__desc">Proje açıklaması buraya gelecek. Teknoloji yığını ve detaylar eklenecek.</p>
-              <div class="project__tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
+
+            <div class="project__expand">
+              <div class="project__expand-inner">
+                <div class="project__details">
+                  <div class="project__details-grid">
+                    <div class="project__details-block">
+                      <h4 class="project__details-title">Uygulama Özellikleri</h4>
+                      <ul class="project__feature-list">
+                        <li>
+                          <strong>Farklı Zaman Modları:</strong>
+                          Hamle başına süre veya oyun boyunca tek süre seçeneği. Hamle Başı Gecikme
+                          (Delay) ve Hamle Sonrası Süre Artışı (Increment) desteği.
+                        </li>
+                        <li>
+                          <strong>Sesli ve Görsel Uyarı:</strong>
+                          Son 5 saniyede "beep" sesi ve sürenin kırmızı renkte yanıp sönme efekti.
+                        </li>
+                        <li>
+                          <strong>Ekran Döndürme:</strong>
+                          Karşı karşıya oynarken 2. oyuncunun sırasında ekranı 180° ters çevirme seçeneği.
+                        </li>
+                        <li>
+                          <strong>5 Farklı Renk Teması:</strong>
+                          Mavi, yeşil, turuncu, mor ve simsiyah (dark) arayüz renk temaları.
+                        </li>
+                        <li>
+                          <strong>Hamle Geçmişi Tablosu:</strong>
+                          Oyuncuların hamle sürelerini arka planda kaydedip pop-up tablo olarak gösterme.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="project__details-block">
+                      <h4 class="project__details-title">Teknoloji Yığını</h4>
+                      <ul class="project__stack-list">
+                        <li>
+                          <span class="project__stack-label">Core</span>
+                          Flutter &amp; Dart (StatefulWidget Yapısı)
+                        </li>
+                        <li>
+                          <span class="project__stack-label">Zaman Yönetimi</span>
+                          Asenkron işlemler için Dart <code>Timer.periodic</code> yapısı
+                        </li>
+                        <li>
+                          <span class="project__stack-label">Ses Paketleri</span>
+                          Alarm sesleri için <code>audioplayers</code> kütüphanesi
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="project__details-actions">
+                    <a href="https://github.com/bektasing/chess-timer" class="btn btn--ghost project__github" target="_blank" rel="noopener noreferrer">
+                      GitHub'da Görüntüle
+                    </a>
+                    <button type="button" class="project__close" aria-label="Detayları kapat">Kapat</button>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -238,12 +313,12 @@
               Instagram
             </a>
 
-            <a href="mailto:bektashamza001@gmail.com" class="social-btn">
+            <div class="social-btn social-btn--static">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              E-posta
-            </a>
+              bektashamza001@gmail.com
+            </div>
           </div>
         </div>
       </div>
