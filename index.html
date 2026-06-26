@@ -220,22 +220,84 @@
             </div>
           </article>
 
-          <article class="project reveal">
-            <div class="project__placeholder">
-              <span class="project__number">02</span>
-              <div class="project__skeleton">
-                <div class="project__skeleton-line project__skeleton-line--wide"></div>
-                <div class="project__skeleton-line"></div>
-                <div class="project__skeleton-line project__skeleton-line--short"></div>
+          <article class="project project--expandable reveal" id="project-todo-app" aria-expanded="false">
+            <div class="project__main">
+              <div class="project__visual">
+                <div class="project__visual-inner project__visual-inner--preview">
+                  <img src="images/todo-preview.png" alt="macOS To-Do App arayüz önizlemesi" class="project__preview-img">
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__status project__status--live">Tamamlandı</span>
+                <h3 class="project__title project__title--active">macOS To-Do App</h3>
+                <p class="project__desc">
+                  Swift ve SwiftUI ile geliştirilmiş, istatistik paneline sahip native bir görev yönetim uygulaması.
+                </p>
+                <div class="project__tags">
+                  <span class="tag">Swift</span>
+                  <span class="tag">SwiftUI</span>
+                  <span class="tag">macOS</span>
+                  <span class="tag">Native</span>
+                </div>
+                <p class="project__hint">
+                  <span class="project__hint-icon" aria-hidden="true">↓</span>
+                  Detaylar için tıkla
+                </p>
               </div>
             </div>
-            <div class="project__info">
-              <span class="project__status">Yakında</span>
-              <h3 class="project__title">Proje Başlığı</h3>
-              <p class="project__desc">Proje açıklaması buraya gelecek. Teknoloji yığını ve detaylar eklenecek.</p>
-              <div class="project__tags">
-                <span class="tag">Python</span>
-                <span class="tag">API</span>
+
+            <div class="project__expand" id="project-todo-app-details">
+              <div class="project__expand-inner">
+                <div class="project__details">
+                  <div class="project__details-grid">
+                    <div class="project__details-block">
+                      <h4 class="project__details-title">Uygulama Özellikleri</h4>
+                      <ul class="project__feature-list">
+                        <li>
+                          <strong>Modern UI:</strong>
+                          Parallax ve glassmorphism efektli arayüz.
+                        </li>
+                        <li>
+                          <strong>Verimlilik Skoru:</strong>
+                          Görevlere göre 0-100 arası skor ve başarı rozetleri.
+                        </li>
+                        <li>
+                          <strong>İstatistik:</strong>
+                          Gelişmiş görev takip dashboard'u.
+                        </li>
+                        <li>
+                          <strong>Dil &amp; Tema:</strong>
+                          Türkçe/İngilizce lokalizasyon ve otomatik karanlık mod desteği.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="project__details-block">
+                      <h4 class="project__details-title">Teknoloji Yığını</h4>
+                      <ul class="project__stack-list">
+                        <li>
+                          <span class="project__stack-label">Core</span>
+                          Swift 5.0 &amp; SwiftUI
+                        </li>
+                        <li>
+                          <span class="project__stack-label">Güvenlik</span>
+                          App Sandbox
+                        </li>
+                        <li>
+                          <span class="project__stack-label">Sistem</span>
+                          macOS 14.0+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="project__details-actions">
+                    <a href="https://github.com/bektasing/to-do-app" class="btn btn--ghost project__github" target="_blank" rel="noopener noreferrer">
+                      GitHub'da Görüntüle
+                    </a>
+                    <button type="button" class="project__close" aria-label="Detayları kapat">Kapat</button>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
