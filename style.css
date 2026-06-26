@@ -886,15 +886,11 @@ img {
 }
 
 .social-btn--static {
-  cursor: default;
+  width: 100%;
+  font: inherit;
+  text-align: left;
   word-break: break-all;
-}
-
-.social-btn--static:hover {
-  color: var(--text-secondary);
-  border-color: var(--border);
-  background: var(--bg-secondary);
-  transform: none;
+  cursor: pointer;
 }
 
 /* ========================================
