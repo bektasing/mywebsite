@@ -1,0 +1,30 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "Hamza Bektaş personal website with Vercel Speed Insights",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo \"Static site - no build required\"",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bektasing/mywebsite.git"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "vercel",
+    "speed-insights"
+  ],
+  "author": "Hamza Bektaş",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bektasing/mywebsite/issues"
+  },
+  "homepage": "https://github.com/bektasing/mywebsite#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
