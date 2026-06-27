@@ -906,6 +906,74 @@ img {
 }
 
 /* ========================================
+   Visitor Counter
+   ======================================== */
+.visitor-counter {
+  width: min(380px, 100%);
+  margin: 2.5rem auto 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(110, 231, 183, 0.18);
+  border-radius: 24px;
+  background: rgba(110, 231, 183, 0.08);
+  box-shadow: 0 24px 50px rgba(26, 184, 143, 0.08), 0 0 0 1px rgba(110, 231, 183, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.visitor-counter:hover {
+  transform: translateY(-1px);
+}
+
+.visitor-counter__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visitor-counter__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(110, 231, 183, 0.16);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(110, 231, 183, 0.18);
+  flex-shrink: 0;
+}
+
+.visitor-counter__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.visitor-counter__body {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.visitor-counter__label {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+}
+
+.visitor-counter__count {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  min-width: 5ch;
+  display: inline-block;
+  text-align: right;
+}
+
+/* ========================================
    Footer
    ======================================== */
 .footer {

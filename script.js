@@ -102,4 +102,55 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const visitorCountEl = document.getElementById('visitor-count');
+
+  const formatVisitorCount = (value) => String(value).padStart(4, '0');
+
+  const animateVisitorCount = (targetValue) => {
+    if (!visitorCountEl) return;
+
+    const startValue = 0;
+    const duration = 1500;
+    const startTime = performance.now();
+
+    const step = (currentTime) => {
+      const elapsed = Math.min(currentTime - startTime, duration);
+      const progress = elapsed / duration;
+      const current = Math.round(startValue + (targetValue - startValue) * progress);
+      visitorCountEl.textContent = formatVisitorCount(current);
+
+      if (elapsed < duration) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const loadVisitorCount = async () => {
+    if (!visitorCountEl) return;
+
+    try {
+      const response = await fetch('https://api.counterapi.dev/v1/bektasing/mywebsite/up', {
+        cache: 'no-store',
+      });
+
+      if (!response.ok) {
+        throw new Error(`Counter API responded with ${response.status}`);
+      }
+
+      const data = await response.json();
+      const value = Number(data.value ?? data.count ?? 0);
+
+      animateVisitorCount(Number.isFinite(value) && value >= 0 ? value : 0);
+    } catch (error) {
+      console.error('Visitor counter yüklenemedi:', error);
+      if (visitorCountEl) {
+        visitorCountEl.textContent = formatVisitorCount(0);
+      }
+    }
+  };
+
+  loadVisitorCount();
 });
