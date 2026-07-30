@@ -17,7 +17,8 @@ await Promise.all([
   cp(resolve(root, "favicon.svg"), resolve(client, "favicon.svg")),
   cp(resolve(root, "images", "notistan.png"), resolve(client, "images", "notistan.png")),
   cp(resolve(root, "images", "age-of-tycoon.png"), resolve(client, "images", "age-of-tycoon.png")),
-  cp(resolve(root, "images", "online-pisti.jpg"), resolve(client, "images", "online-pisti.jpg"))
+  cp(resolve(root, "images", "online-pisti.jpg"), resolve(client, "images", "online-pisti.jpg")),
+  cp(resolve(root, "images", "todo-preview.png"), resolve(client, "images", "todo-preview.png"))
 ]);
 
 const worker = `export default {
