@@ -1,398 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kişisel tanıtım sitesi — yazılım ve strateji oyunları.">
-  <title>Hamza Bektaş | Kişisel Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hamza Bektaş'ın web, masaüstü ve mobil ürünlerden oluşan yazılım portföyü.">
+  <meta name="theme-color" content="#080b12">
+  <title>Hamza Bektaş — Software & Product</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#hero" class="nav__logo">HB<span class="nav__logo-dot">.</span></a>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav shell" aria-label="Ana navigasyon">
+      <a class="brand" href="#home" aria-label="Hamza Bektaş ana sayfa">
+        <span class="brand__mark" aria-hidden="true">HB</span>
+        <span class="brand__name">Hamza Bektaş</span>
+      </a>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Menüyü aç veya kapat</span>
+        <span></span><span></span>
       </button>
 
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#about" class="nav__link">Hakkımda</a></li>
-        <li><a href="#projects" class="nav__link">Projeler</a></li>
-        <li><a href="#contact" class="nav__link">İletişim</a></li>
-      </ul>
+      <div class="nav__links" id="navLinks">
+        <a href="#about">Hakkımda</a>
+        <a href="#projects">Projeler</a>
+        <a href="#contact">İletişim</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="hero">
-      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
-      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--blue" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--green" aria-hidden="true"></div>
 
-      <div class="container hero__content">
-        <p class="hero__eyebrow reveal">Merhaba, ben</p>
-        <h1 class="hero__title reveal">
-          Hamza <span class="hero__title-accent">Bektaş</span>
-        </h1>
-        <p class="hero__subtitle reveal">
-          Kod yazan, strateji kuran bir yazılım meraklısı.
-        </p>
-        <div class="hero__actions reveal">
-          <a href="#projects" class="btn btn--primary">Projelerimi Gör</a>
-          <a href="#contact" class="btn btn--ghost">İletişime Geç</a>
-        </div>
-        <a href="#about" class="hero__scroll" aria-label="Aşağı kaydır">
-          <span></span>
-        </a>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Hakkımda</span>
-          <h2 class="section__title">Kim olduğumu<br>tanımak ister misin?</h2>
-          <p class="section__desc">
-            Üniversite eğitimim, yazılıma olan tutkum ve boş zamanlarımda beni tanımlayan ilgi alanlarım.
+      <div class="shell hero__layout">
+        <div class="hero__copy">
+          <div class="eyebrow reveal">
+            <span class="eyebrow__dot"></span>
+            Yeni ürünler geliştiriyorum
+          </div>
+          <h1 class="hero__title reveal">
+            Fikri, çalışan bir<br>
+            <span>dijital ürüne</span> dönüştürüyorum.
+          </h1>
+          <p class="hero__lead reveal">
+            Web, masaüstü ve mobil platformlar için yalın arayüzlü,
+            güvenilir ve ölçeklenebilir deneyimler tasarlayıp geliştiriyorum.
           </p>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                <path d="M12 14v7"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Eğitim</h3>
-            <p class="card__text">
-              Üniversite eğitimimle teknik temellerimi güçlendiriyor, teoriyi pratiğe dönüştürerek
-              yazılım dünyasında kendimi sürekli geliştiriyorum.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Yazılım</h3>
-            <p class="card__text">
-              Temiz kod, modern teknolojiler ve problem çözme benim için bir tutku.
-              Web geliştirme, algoritmalar ve yeni araçları keşfetmekten keyif alıyorum.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Strateji Oyunları</h3>
-            <p class="card__text">
-              Kaynak yönetimi, uzun vadeli planlama ve taktiksel düşünme —
-              strateji oyunları bana yazılımdaki gibi sabır ve öngörü kazandırıyor.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section section--alt" id="projects">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Projeler</span>
-          <h2 class="section__title">Yakında burada<br>olacaklar</h2>
-          <p class="section__desc">
-            Üzerinde çalıştığım ve yakında paylaşacağım projeler için yer tutucular.
-          </p>
-        </div>
-
-        <div class="projects">
-          <article class="project project--expandable reveal" aria-expanded="false">
-            <div class="project__main">
-              <div class="project__visual">
-                <div class="project__visual-inner project__visual-inner--chess">
-                  <div class="chess-mock">
-                    <div class="chess-mock__timer chess-mock__timer--white">
-                      <span>10:00</span>
-                    </div>
-                    <div class="chess-mock__divider"></div>
-                    <div class="chess-mock__timer chess-mock__timer--black">
-                      <span>10:00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="project__info">
-                <span class="project__status project__status--live">Tamamlandı</span>
-                <h3 class="project__title project__title--active">Satranç Saati (Chess Timer)</h3>
-                <p class="project__desc">
-                  Flutter ile kendimi geliştirmek için yazdığım, dairesel sayaç arayüzüne ve temel
-                  zaman ayarlarına sahip bir Android satranç saati uygulaması.
-                </p>
-                <div class="project__tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
-                  <span class="tag">Android</span>
-                </div>
-                <p class="project__hint">
-                  <span class="project__hint-icon" aria-hidden="true">↓</span>
-                  Detaylar için tıkla
-                </p>
-              </div>
-            </div>
-
-            <div class="project__expand">
-              <div class="project__expand-inner">
-                <div class="project__details">
-                  <div class="project__details-grid">
-                    <div class="project__details-block">
-                      <h4 class="project__details-title">Uygulama Özellikleri</h4>
-                      <ul class="project__feature-list">
-                        <li>
-                          <strong>Farklı Zaman Modları:</strong>
-                          Hamle başına süre veya oyun boyunca tek süre seçeneği. Hamle Başı Gecikme
-                          (Delay) ve Hamle Sonrası Süre Artışı (Increment) desteği.
-                        </li>
-                        <li>
-                          <strong>Sesli ve Görsel Uyarı:</strong>
-                          Son 5 saniyede "beep" sesi ve sürenin kırmızı renkte yanıp sönme efekti.
-                        </li>
-                        <li>
-                          <strong>Ekran Döndürme:</strong>
-                          Karşı karşıya oynarken 2. oyuncunun sırasında ekranı 180° ters çevirme seçeneği.
-                        </li>
-                        <li>
-                          <strong>5 Farklı Renk Teması:</strong>
-                          Mavi, yeşil, turuncu, mor ve simsiyah (dark) arayüz renk temaları.
-                        </li>
-                        <li>
-                          <strong>Hamle Geçmişi Tablosu:</strong>
-                          Oyuncuların hamle sürelerini arka planda kaydedip pop-up tablo olarak gösterme.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="project__details-block">
-                      <h4 class="project__details-title">Teknoloji Yığını</h4>
-                      <ul class="project__stack-list">
-                        <li>
-                          <span class="project__stack-label">Core</span>
-                          Flutter &amp; Dart (StatefulWidget Yapısı)
-                        </li>
-                        <li>
-                          <span class="project__stack-label">Zaman Yönetimi</span>
-                          Asenkron işlemler için Dart <code>Timer.periodic</code> yapısı
-                        </li>
-                        <li>
-                          <span class="project__stack-label">Ses Paketleri</span>
-                          Alarm sesleri için <code>audioplayers</code> kütüphanesi
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="project__details-actions">
-                    <a href="https://github.com/bektasing/chess-timer" class="btn btn--ghost project__github" target="_blank" rel="noopener noreferrer">
-                      GitHub'da Görüntüle
-                    </a>
-                    <button type="button" class="project__close" aria-label="Detayları kapat">Kapat</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project project--expandable reveal" id="project-todo-app" aria-expanded="false">
-            <div class="project__main">
-              <div class="project__visual">
-                <div class="project__visual-inner project__visual-inner--preview">
-                  <img src="images/todo-preview.png" alt="macOS To-Do App arayüz önizlemesi" class="project__preview-img">
-                </div>
-              </div>
-              <div class="project__info">
-                <span class="project__status project__status--live">Tamamlandı</span>
-                <h3 class="project__title project__title--active">macOS To-Do App</h3>
-                <p class="project__desc">
-                  Swift ve SwiftUI ile geliştirilmiş, istatistik paneline sahip native bir görev yönetim uygulaması.
-                </p>
-                <div class="project__tags">
-                  <span class="tag">Swift</span>
-                  <span class="tag">SwiftUI</span>
-                  <span class="tag">macOS</span>
-                  <span class="tag">Native</span>
-                </div>
-                <p class="project__hint">
-                  <span class="project__hint-icon" aria-hidden="true">↓</span>
-                  Detaylar için tıkla
-                </p>
-              </div>
-            </div>
-
-            <div class="project__expand" id="project-todo-app-details">
-              <div class="project__expand-inner">
-                <div class="project__details">
-                  <div class="project__details-grid">
-                    <div class="project__details-block">
-                      <h4 class="project__details-title">Uygulama Özellikleri</h4>
-                      <ul class="project__feature-list">
-                        <li>
-                          <strong>Modern UI:</strong>
-                          Parallax ve glassmorphism efektli arayüz.
-                        </li>
-                        <li>
-                          <strong>Verimlilik Skoru:</strong>
-                          Görevlere göre 0-100 arası skor ve başarı rozetleri.
-                        </li>
-                        <li>
-                          <strong>İstatistik:</strong>
-                          Gelişmiş görev takip dashboard'u.
-                        </li>
-                        <li>
-                          <strong>Dil &amp; Tema:</strong>
-                          Türkçe/İngilizce lokalizasyon ve otomatik karanlık mod desteği.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="project__details-block">
-                      <h4 class="project__details-title">Teknoloji Yığını</h4>
-                      <ul class="project__stack-list">
-                        <li>
-                          <span class="project__stack-label">Core</span>
-                          Swift 5.0 &amp; SwiftUI
-                        </li>
-                        <li>
-                          <span class="project__stack-label">Güvenlik</span>
-                          App Sandbox
-                        </li>
-                        <li>
-                          <span class="project__stack-label">Sistem</span>
-                          macOS 14.0+
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="project__details-actions">
-                    <a href="https://github.com/bektasing/to-do-app" class="btn btn--ghost project__github" target="_blank" rel="noopener noreferrer">
-                      GitHub'da Görüntüle
-                    </a>
-                    <button type="button" class="project__close" aria-label="Detayları kapat">Kapat</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project__placeholder">
-              <span class="project__number">03</span>
-              <div class="project__skeleton">
-                <div class="project__skeleton-line project__skeleton-line--wide"></div>
-                <div class="project__skeleton-line"></div>
-                <div class="project__skeleton-line project__skeleton-line--short"></div>
-              </div>
-            </div>
-            <div class="project__info">
-              <span class="project__status">Yakında</span>
-              <h3 class="project__title">Proje Başlığı</h3>
-              <p class="project__desc">Proje açıklaması buraya gelecek. Teknoloji yığını ve detaylar eklenecek.</p>
-              <div class="project__tags">
-                <span class="tag">TypeScript</span>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact reveal">
-          <div class="contact__content">
-            <span class="section__tag">İletişim</span>
-            <h2 class="section__title">Birlikte<br>konuşalım</h2>
-            <p class="section__desc">
-              Projeler, işbirliği veya sadece merhaba demek için bana ulaşabilirsin.
-            </p>
+          <div class="hero__actions reveal">
+            <a class="button button--primary" href="#projects">
+              Projeleri keşfet
+              <span aria-hidden="true">↘</span>
+            </a>
+            <a class="button button--secondary" href="#contact">İletişime geç</a>
           </div>
 
-          <div class="contact__links">
-            <a href="https://github.com/bektasing" class="social-btn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-              GitHub
-            </a>
+          <dl class="hero__metrics reveal" aria-label="Çalışma alanları">
+            <div>
+              <dt>03</dt>
+              <dd>Aktif ürün</dd>
+            </div>
+            <div>
+              <dt>03</dt>
+              <dd>Platform</dd>
+            </div>
+            <div>
+              <dt>∞</dt>
+              <dd>Geliştirme odağı</dd>
+            </div>
+          </dl>
+        </div>
 
-            <a href="https://www.linkedin.com/in/hamza-bektas/" class="social-btn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              LinkedIn
-            </a>
+        <div class="hero-showcase reveal" aria-label="Öne çıkan uygulamalar">
+          <div class="hero-showcase__halo" aria-hidden="true"></div>
+          <div class="hero-showcase__core">
+            <span class="hero-showcase__label">PRODUCT / ENGINEERING</span>
+            <strong>Build.<br>Refine.<br>Ship.</strong>
+            <span class="hero-showcase__meta">Web · Desktop · Mobile</span>
+          </div>
 
-            <a href="https://instagram.com/hamzabektas00" class="social-btn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-              Instagram
-            </a>
+          <a class="floating-app floating-app--notistan" href="#projects" aria-label="Notistan projesine git">
+            <img src="images/notistan.png" alt="" width="512" height="512">
+            <span>Notistan</span>
+          </a>
+          <a class="floating-app floating-app--tycoon" href="#projects" aria-label="Age of Tycoon projesine git">
+            <img src="images/age-of-tycoon.png" alt="" width="512" height="512">
+            <span>Age of Tycoon</span>
+          </a>
+          <a class="floating-app floating-app--pisti" href="#projects" aria-label="Online Pişti projesine git">
+            <img src="images/online-pisti.jpg" alt="" width="512" height="512">
+            <span>Online Pişti</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-            <button type="button" class="social-btn social-btn--static">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              bektashamza001@gmail.com
+    <section class="section section--about" id="about">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">01 / Hakkımda</span>
+            <h2>Ürün düşüncesiyle<br>kod yazıyorum.</h2>
+          </div>
+          <p>
+            Farklı platformlarda tutarlı çalışan, gerçek bir ihtiyacı çözen ve her
+            dokunuşta güven veren ürünler üretmeye odaklanan bir geliştiriciyim.
+          </p>
+        </div>
+
+        <div class="capabilities">
+          <article class="capability reveal">
+            <span class="capability__index">01</span>
+            <h3>Ürün Geliştirme</h3>
+            <p>Fikirden çalışan ürüne; kapsam, arayüz, geliştirme ve yayın süreçlerini birlikte ele alıyorum.</p>
+          </article>
+          <article class="capability reveal">
+            <span class="capability__index">02</span>
+            <h3>Cross-Platform</h3>
+            <p>React, Tauri ve Capacitor ile web, masaüstü ve mobil deneyimleri ortak bir sistemde buluşturuyorum.</p>
+          </article>
+          <article class="capability reveal">
+            <span class="capability__index">03</span>
+            <h3>Sürekli İyileştirme</h3>
+            <p>Performans, erişilebilirlik ve kullanıcı geri bildirimlerini ürünün doğal geliştirme döngüsüne katıyorum.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--projects" id="projects">
+      <div class="shell">
+        <div class="section-heading section-heading--projects reveal">
+          <div>
+            <span class="kicker">02 / Seçili projeler</span>
+            <h2>Platformlar arasında<br>çalışan ürünler.</h2>
+          </div>
+          <p>
+            Her kart bir ürünün kısa özetidir. Özellikleri, teknoloji kararlarını
+            ve erişim bağlantılarını görmek için detayları açabilirsin.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-card--notistan reveal">
+            <div class="project-card__top">
+              <img class="project-card__icon" src="images/notistan.png" alt="Notistan uygulama ikonu" width="512" height="512">
+              <span class="status status--building"><i></i> Geliştiriliyor</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 01</span>
+              <h3>Notistan <small>Cross-Platform Note &amp; To-Do</small></h3>
+              <p>Tauri, Capacitor ve Supabase ile geliştirilmiş; anlık senkronizasyon özellikli, minimalist bir verimlilik platformu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>React</span><span>Tauri</span><span>Capacitor</span><span>Supabase</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="notistanModal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
             </button>
-          </div>
+          </article>
+
+          <article class="project-card project-card--tycoon reveal">
+            <div class="project-card__top">
+              <img class="project-card__icon" src="images/age-of-tycoon.png" alt="Age of Tycoon uygulama ikonu" width="512" height="512">
+              <span class="status status--testing"><i></i> Kapalı test / Yayında</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 02</span>
+              <h3>Age of Tycoon</h3>
+              <p>Çoklu dil destekli ve gelişmiş otomasyon sistemlerine sahip mobil idle / tycoon oyunu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>React</span><span>Capacitor</span><span>TypeScript</span><span>Android</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="tycoonModal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <article class="project-card project-card--pisti reveal">
+            <div class="project-card__top">
+              <img class="project-card__icon" src="images/online-pisti.jpg" alt="Online Pişti uygulama ikonu" width="512" height="512">
+              <span class="status status--testing"><i></i> Kapalı testte</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 03</span>
+              <h3>Online Pişti</h3>
+              <p>Klasik pişti deneyimini modern web teknolojileri ve mobil entegrasyon ile buluşturan çok oyunculu kart oyunu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>Capacitor</span><span>Multiplayer</span><span>Android</span><span>Web</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="pistiModal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="visitor-counter reveal" aria-label="Ziyaretçi sayaç kartı">
-      <div class="container visitor-counter__wrapper">
-        <div class="visitor-counter__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-            <path d="M12 4.5c4.5 0 7.5 4.5 7.5 7.5s-3 7.5-7.5 7.5S4.5 16.5 4.5 12 7.5 4.5 12 4.5z"/>
-            <path d="M12 9.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"/>
-          </svg>
+    <section class="section section--contact" id="contact">
+      <div class="shell contact-panel reveal">
+        <div class="contact-panel__copy">
+          <span class="kicker">03 / İletişim</span>
+          <h2>Bir sonraki iyi fikir<br>bir mesajla başlayabilir.</h2>
+          <p>Yeni projeler, ürün geliştirme veya yalnızca merhaba demek için bana ulaşabilirsin.</p>
         </div>
-
-        <div class="visitor-counter__body">
-          <span class="visitor-counter__label">Ziyaretçi:</span>
-          <span class="visitor-counter__count" id="visitor-count">0000</span>
+        <div class="contact-panel__actions">
+          <a class="button button--primary" href="mailto:bektashamza001@gmail.com">E-posta gönder <span aria-hidden="true">↗</span></a>
+          <div class="social-links">
+            <a href="https://github.com/bektasing" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/hamza-bektas/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="https://instagram.com/hamzabektas00" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Hamza Bektaş. Tüm hakları saklıdır.</p>
-      <a href="#hero" class="footer__top">Yukarı ↑</a>
+    <div class="shell footer__inner">
+      <p>© <span id="year"></span> Hamza Bektaş</p>
+      <p>Türkiye'de tasarlandı ve geliştirildi.</p>
+      <a href="#home">Yukarı dön <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
+
+  <dialog class="project-modal" id="notistanModal" aria-labelledby="notistanTitle">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <img src="images/notistan.png" alt="" width="512" height="512">
+          <div>
+            <span class="status status--building"><i></i> Geliştiriliyor</span>
+            <h2 id="notistanTitle">Notistan</h2>
+            <p>Cross-Platform Note &amp; To-Do</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Notistan detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Anlık senkronizasyon, ortak çalışma ve yalın tasarımı tek bir güvenli verimlilik platformunda buluşturur.</p>
+
+        <section class="modal-section" aria-labelledby="notistanFeatures">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="notistanFeatures">Uygulama Özellikleri</h3>
+            <ul class="feature-grid">
+              <li><strong>Modern UI</strong><span>Dikkati dağıtmayan, şık ve göz yormayan modern karanlık tema.</span></li>
+              <li><strong>Kanban Boards</strong><span>Sürükle-bırak desteği ile sezgisel görev ve süreç yönetimi.</span></li>
+              <li><strong>Real-time Collaboration</strong><span>Paylaşılan notlar ile ekipler arası gerçek zamanlı çalışma.</span></li>
+              <li><strong>Smart Sync</strong><span>Tüm cihazlar arasında güvenli ve anlık veri senkronizasyonu.</span></li>
+              <li><strong>Dil Desteği</strong><span>Türkçe, İngilizce ve İspanyolca arayüz desteği.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="notistanStack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="notistanStack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Core</th><td>React (Vite) &amp; TypeScript</td><td>Arayüz ve uygulama mantığı</td></tr>
+                  <tr><th scope="row">Sistem · Masaüstü</th><td>Tauri (Rust)</td><td>Hafif native masaüstü çalışma zamanı</td></tr>
+                  <tr><th scope="row">Sistem · Mobil</th><td>Capacitor (Android)</td><td>Native mobil paketleme ve köprü</td></tr>
+                  <tr><th scope="row">Arka Uç</th><td>Supabase</td><td>Auth, veritabanı ve real-time senkronizasyon</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://notistan.me" target="_blank" rel="noopener noreferrer">Web'de aç <span aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="https://play.google.com/store/apps/details?id=com.bektasing.notistan" target="_blank" rel="noopener noreferrer">Play Store</a>
+          <a class="button button--text" href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">Kapalı test grubuna katıl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-modal" id="tycoonModal" aria-labelledby="tycoonTitle">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <img src="images/age-of-tycoon.png" alt="" width="512" height="512">
+          <div>
+            <span class="status status--testing"><i></i> Kapalı test / Yayında</span>
+            <h2 id="tycoonTitle">Age of Tycoon</h2>
+            <p>Mobile Idle / Tycoon Game</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Age of Tycoon detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Taş devrinden uzay çağına uzanan ilerlemeyi otomasyon, çevrimdışı kazanç ve prestij sistemleriyle birleştiren mobil tycoon deneyimi.</p>
+
+        <section class="modal-section" aria-labelledby="tycoonFeatures">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="tycoonFeatures">Uygulama Özellikleri</h3>
+            <ul class="feature-grid">
+              <li><strong>Dinamik İlerleme</strong><span>Taş devrinden Uzay çağına uzanan görsel ve ekonomik çağ atlama sistemi.</span></li>
+              <li><strong>Çevrimdışı Kazanç</strong><span>Uygulama arka plandayken bile çalışan matematiksel kazanç döngüsü.</span></li>
+              <li><strong>Prestij Mekaniği</strong><span>Sonsuz tekrar oynanabilirlik sunan end-game sıfırlama sistemi.</span></li>
+              <li><strong>Dil &amp; Lokalizasyon</strong><span>Dinamik i18n entegrasyonu ile çoklu dil desteği.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="tycoonStack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="tycoonStack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Core</th><td>React &amp; TypeScript</td><td>Oyun arayüzü ve ekonomi sistemi</td></tr>
+                  <tr><th scope="row">Native Entegrasyon</th><td>Capacitor &amp; App Lifecycle API</td><td>Android yaşam döngüsü ve cihaz entegrasyonu</td></tr>
+                  <tr><th scope="row">Para Kazanma &amp; Ağ</th><td>Google AdMob</td><td>Mobil reklam altyapısı</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://play.google.com/store/apps/details?id=com.bektasing.ageoftycoon" target="_blank" rel="noopener noreferrer">Play Store'da incele <span aria-hidden="true">↗</span></a>
+          <a class="button button--text" href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">Kapalı test grubuna katıl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-modal" id="pistiModal" aria-labelledby="pistiTitle">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <img src="images/online-pisti.jpg" alt="" width="512" height="512">
+          <div>
+            <span class="status status--testing"><i></i> Kapalı testte</span>
+            <h2 id="pistiTitle">Online Pişti</h2>
+            <p>Cross-Platform Multiplayer Card Game</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Online Pişti detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Klasik pişti kurallarını, gerçek zamanlı eşleştirme ve kesintisiz web / Android erişimiyle modern bir çok oyunculu deneyime dönüştürür.</p>
+
+        <section class="modal-section" aria-labelledby="pistiFeatures">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="pistiFeatures">Uygulama Özellikleri</h3>
+            <ul class="feature-grid">
+              <li><strong>Cross-Platform</strong><span>Hem web'de hem Android'de kesintisiz erişim.</span></li>
+              <li><strong>Çok Oyunculu</strong><span>Gerçek zamanlı eşleştirme sistemi ile rekabetçi maçlar.</span></li>
+              <li><strong>Modern UI</strong><span>Klasik kurallara sadık, hızlı ve akıcı oyun arayüzü.</span></li>
+              <li><strong>Entegrasyonlar</strong><span>Google Play Services ve AdMob altyapısı.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="pistiStack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="pistiStack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Core</th><td>Capacitor &amp; Modern Web Teknolojileri</td><td>Ortak oyun deneyimi ve native paketleme</td></tr>
+                  <tr><th scope="row">Dağıtım &amp; Sunucu</th><td>Vercel &amp; Google Play Console</td><td>Web yayını ve Android dağıtımı</td></tr>
+                  <tr><th scope="row">Servisler</th><td>Google AdMob &amp; Play Services</td><td>Reklam ve Google Play entegrasyonları</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://onlinepisti.app" target="_blank" rel="noopener noreferrer">Web'de oyna <span aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="https://play.google.com/store/apps/details?id=com.bektasing.onlinepisti" target="_blank" rel="noopener noreferrer">Play Store (Çok Yakında)</a>
+          <a class="button button--text" href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">Kapalı test grubuna katıl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
