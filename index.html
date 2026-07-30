@@ -22,15 +22,23 @@
         <span class="brand__name">Hamza Bektaş</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
-        <span class="sr-only">Menüyü aç veya kapat</span>
-        <span></span><span></span>
-      </button>
+      <div class="nav__controls">
+        <div class="nav__links" id="navLinks">
+          <a href="#about">Hakkımda</a>
+          <a href="#projects">Projeler</a>
+          <a href="#contact">İletişim</a>
+        </div>
 
-      <div class="nav__links" id="navLinks">
-        <a href="#about">Hakkımda</a>
-        <a href="#projects">Projeler</a>
-        <a href="#contact">İletişim</a>
+        <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch to English">
+          <span class="language-toggle__option language-toggle__option--tr">TR</span>
+          <span class="language-toggle__divider" aria-hidden="true">/</span>
+          <span class="language-toggle__option language-toggle__option--en">EN</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+          <span class="sr-only">Menüyü aç veya kapat</span>
+          <span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>

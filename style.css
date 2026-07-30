@@ -148,6 +148,12 @@ img {
   min-height: 100%;
 }
 
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -197,6 +203,50 @@ img {
 .nav__links a:hover {
   background: rgba(255, 255, 255, 0.045);
   color: var(--text);
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 68px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    transform 150ms var(--ease-out),
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.language-toggle:hover {
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.language-toggle:active {
+  transform: scale(0.97);
+}
+
+.language-toggle__option {
+  transition: color 150ms ease;
+}
+
+.language-toggle__divider {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+html[lang="tr"] .language-toggle__option--tr,
+html[lang="en"] .language-toggle__option--en {
+  color: var(--green);
 }
 
 .nav-toggle {
@@ -1510,6 +1560,10 @@ tbody tr:last-child td {
   .nav-toggle {
     position: relative;
     display: block;
+  }
+
+  .language-toggle {
+    height: 40px;
   }
 
   .nav__links {

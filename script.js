@@ -1,11 +1,279 @@
+const englishText = {
+  "İçeriğe geç": "Skip to content",
+  "Menüyü aç veya kapat": "Open or close the menu",
+  "Hakkımda": "About",
+  "Projeler": "Projects",
+  "İletişim": "Contact",
+  "Yazılım geliştiricisi · Türkiye": "Software developer · Türkiye",
+  "Merhaba, ben Hamza.": "Hello, I'm Hamza.",
+  "Fikirleri ürüne": "I turn ideas into",
+  "dönüştürüyorum.": "real products.",
+  "Yeni teknolojiler öğrenmeyi, faydalı uygulamalar geliştirmeyi ve küçük bir fikrin çalışan bir ürüne dönüşme sürecini seviyorum.": "I enjoy learning new technologies, building useful apps, and watching a small idea grow into a working product.",
+  "Projeleri keşfet": "Explore projects",
+  "İletişime geç": "Get in touch",
+  "Portföy projesi": "Portfolio projects",
+  "Kapalı test": "Closed tests",
+  "Mobil & masaüstü": "Mobile & desktop",
+  "Şu sıralar": "Currently",
+  "Üç uygulamam kapalı testte.": "Three of my apps are in closed testing.",
+  "Notistan, Age of Tycoon ve Online Pişti için yeni test kullanıcılarını kabul ediyorum. Deneyip geri bildirim bırakmak istersen topluluğa katılabilirsin.": "I'm welcoming new testers for Notistan, Age of Tycoon, and Online Pişti. Join the community if you'd like to try them and share feedback.",
+  "Test topluluğuna katıl": "Join the testing community",
+  "01 / Hakkımda": "01 / About",
+  "Biraz yazılım,": "A bit of software,",
+  "biraz da merak.": "and plenty of curiosity.",
+  "Üniversite eğitimimle teknik temelimi geliştirirken boş zamanlarımda uygulamalar üretiyor, yeni araçlar deniyor ve strateji oyunları oynuyorum.": "While strengthening my technical foundation at university, I spend my free time building apps, exploring new tools, and playing strategy games.",
+  "Eğitim": "Education",
+  "Teknik temellerimi üniversite eğitimimle güçlendiriyor, öğrendiklerimi gerçek projelere dönüştürüyorum.": "I strengthen my technical foundations through university and turn what I learn into real projects.",
+  "Yazılım": "Software",
+  "Web, Android ve masaüstünde çalışan uygulamalar geliştiriyor; temiz, anlaşılır deneyimler kurmaya çalışıyorum.": "I build apps for the web, Android, and desktop, with a focus on clean and understandable experiences.",
+  "Strateji Oyunları": "Strategy Games",
+  "Kaynak yönetimi ve uzun vadeli planlama gerektiren oyunlar, problem çözme biçimimi de besliyor.": "Games built around resource management and long-term planning also shape the way I solve problems.",
+  "02 / Projelerim": "02 / My Projects",
+  "Geliştirdiğim ve": "Things I've built",
+  "öğrendiğim işler.": "and learned from.",
+  "Kapalı testteki yeni uygulamalarımın yanında, öğrenme sürecimde geliştirdiğim ve bazen yalnızca can sıkıntısından yaptığım projeleri de burada tutuyorum.": "Alongside my new apps in closed testing, I keep the projects I built while learning—and sometimes simply out of boredom—right here.",
+  "Google Play · Kapalı test erişimi": "Google Play · Closed test access",
+  "Notistan, Age of Tycoon ve Online Pişti'nin Play Store sayfalarını görebilmek için önce test grubuna, Play Store'da kullandığın aynı Google hesabıyla katılman gerekiyor.": "To view the Play Store pages for Notistan, Age of Tycoon, and Online Pişti, first join the testing group with the same Google account you use on the Play Store.",
+  "Önce test grubuna katıl": "Join the testing group first",
+  "Kapalı test · Teste açık": "Closed test · Accepting testers",
+  "Tauri, Capacitor ve Supabase ile geliştirilmiş; anlık senkronizasyon özellikli, minimalist bir verimlilik platformu.": "A minimalist productivity platform built with Tauri, Capacitor, and Supabase, featuring real-time synchronization.",
+  "Detaylar için tıkla": "Click for details",
+  "Çoklu dil destekli ve gelişmiş otomasyon sistemlerine sahip mobil idle / tycoon oyunu.": "A mobile idle / tycoon game with multilingual support and advanced automation systems.",
+  "Klasik pişti deneyimini modern web teknolojileri ve mobil entegrasyon ile buluşturan çok oyunculu kart oyunu.": "A multiplayer card game that brings the classic Pişti experience together with modern web technology and mobile integration.",
+  "Tamamlandı": "Completed",
+  "Satranç Saati": "Chess Clock",
+  "Flutter ile kendimi geliştirmek için yazdığım, farklı zaman modlarına sahip Android satranç saati.": "An Android chess clock with multiple time modes, built while learning and improving my Flutter skills.",
+  "Swift ve SwiftUI ile geliştirilmiş, istatistik paneline sahip native bir görev yönetim uygulaması.": "A native task management app built with Swift and SwiftUI, featuring a statistics dashboard.",
+  "Açık kaynak": "Open source",
+  "2048, ama 3'ün katlarıyla": "2048, but with multiples of 3",
+  "Can sıkıntısından yaptığım; klasik 2048 mantığını 3, 6, 12… 3072 sayı dizisiyle yeniden yorumlayan bulmaca oyunu.": "A puzzle game I made out of boredom, reimagining classic 2048 with the sequence 3, 6, 12… 3072.",
+  "03 / İletişim": "03 / Contact",
+  "Bir sonraki iyi fikir": "The next good idea",
+  "bir mesajla başlayabilir.": "can start with a message.",
+  "Yeni projeler, ürün geliştirme veya yalnızca merhaba demek için bana ulaşabilirsin.": "You can reach me about new projects, product development, or simply to say hello.",
+  "E-posta": "Email",
+  "Türkiye'de tasarlandı ve geliştirildi.": "Designed and developed in Türkiye.",
+  "Yukarı dön": "Back to top",
+  "Anlık senkronizasyon, ortak çalışma ve yalın tasarımı tek bir güvenli verimlilik platformunda buluşturur.": "Brings real-time sync, collaboration, and a clean design together in one secure productivity platform.",
+  "Uygulama Özellikleri": "App Features",
+  "Dikkati dağıtmayan, şık ve göz yormayan modern karanlık tema.": "A distraction-free, polished dark theme designed for comfortable use.",
+  "Sürükle-bırak desteği ile sezgisel görev ve süreç yönetimi.": "Intuitive task and workflow management with drag-and-drop support.",
+  "Paylaşılan notlar ile ekipler arası gerçek zamanlı çalışma.": "Real-time teamwork through shared notes.",
+  "Tüm cihazlar arasında güvenli ve anlık veri senkronizasyonu.": "Secure, instant data synchronization across all devices.",
+  "Dil Desteği": "Language Support",
+  "Türkçe, İngilizce ve İspanyolca arayüz desteği.": "Interface support for Turkish, English, and Spanish.",
+  "Teknoloji Yığını": "Technology Stack",
+  "Katman": "Layer",
+  "Teknoloji": "Technology",
+  "Rol": "Role",
+  "Arayüz ve uygulama mantığı": "Interface and application logic",
+  "Sistem · Masaüstü": "System · Desktop",
+  "Hafif native masaüstü çalışma zamanı": "Lightweight native desktop runtime",
+  "Sistem · Mobil": "System · Mobile",
+  "Native mobil paketleme ve köprü": "Native mobile packaging and bridge",
+  "Arka Uç": "Backend",
+  "Auth, veritabanı ve real-time senkronizasyon": "Authentication, database, and real-time sync",
+  "Play Store'da teste katıl": "Join the test on Play Store",
+  "Web'de aç": "Open on the web",
+  "Kapalı test grubuna katıl": "Join the closed testing group",
+  "Taş devrinden uzay çağına uzanan ilerlemeyi otomasyon, çevrimdışı kazanç ve prestij sistemleriyle birleştiren mobil tycoon deneyimi.": "A mobile tycoon experience that combines progression from the Stone Age to the Space Age with automation, offline earnings, and prestige systems.",
+  "Dinamik İlerleme": "Dynamic Progression",
+  "Taş devrinden Uzay çağına uzanan görsel ve ekonomik çağ atlama sistemi.": "A visual and economic era progression system spanning the Stone Age to the Space Age.",
+  "Çevrimdışı Kazanç": "Offline Earnings",
+  "Uygulama arka plandayken bile çalışan matematiksel kazanç döngüsü.": "A mathematical earnings loop that keeps working while the app is in the background.",
+  "Prestij Mekaniği": "Prestige System",
+  "Sonsuz tekrar oynanabilirlik sunan end-game sıfırlama sistemi.": "An end-game reset system designed for endless replayability.",
+  "Dil & Lokalizasyon": "Language & Localization",
+  "Dinamik i18n entegrasyonu ile çoklu dil desteği.": "Multilingual support powered by dynamic i18n integration.",
+  "Oyun arayüzü ve ekonomi sistemi": "Game interface and economy system",
+  "Native Entegrasyon": "Native Integration",
+  "Android yaşam döngüsü ve cihaz entegrasyonu": "Android lifecycle and device integration",
+  "Para Kazanma & Ağ": "Monetization & Network",
+  "Mobil reklam altyapısı": "Mobile advertising infrastructure",
+  "Klasik pişti kurallarını, gerçek zamanlı eşleştirme ve kesintisiz web / Android erişimiyle modern bir çok oyunculu deneyime dönüştürür.": "Transforms the classic rules of Pişti into a modern multiplayer experience with real-time matchmaking and seamless web / Android access.",
+  "Hem web'de hem Android'de kesintisiz erişim.": "Seamless access on both the web and Android.",
+  "Çok Oyunculu": "Multiplayer",
+  "Gerçek zamanlı eşleştirme sistemi ile rekabetçi maçlar.": "Competitive matches with real-time matchmaking.",
+  "Klasik kurallara sadık, hızlı ve akıcı oyun arayüzü.": "A fast, fluid game interface that stays true to the classic rules.",
+  "Entegrasyonlar": "Integrations",
+  "Google Play Services ve AdMob altyapısı.": "Google Play Services and AdMob infrastructure.",
+  "Capacitor & Modern Web Teknolojileri": "Capacitor & Modern Web Technologies",
+  "Ortak oyun deneyimi ve native paketleme": "Shared game experience and native packaging",
+  "Dağıtım & Sunucu": "Deployment & Server",
+  "Web yayını ve Android dağıtımı": "Web publishing and Android distribution",
+  "Servisler": "Services",
+  "Reklam ve Google Play entegrasyonları": "Advertising and Google Play integrations",
+  "Web'de oyna": "Play on the web",
+  "Flutter Android Projesi": "Flutter Android Project",
+  "Flutter öğrenme sürecimde geliştirdiğim; yüz yüze maçlar için farklı zaman modları ve oyun içi uyarılar sunan Android satranç saati.": "An Android chess clock I built while learning Flutter, with multiple time modes and in-game alerts for face-to-face matches.",
+  "Farklı Zaman Modları": "Multiple Time Modes",
+  "Hamle başına veya oyun boyunca tek süre; delay ve increment seçenekleri.": "Per-move or full-game timing with delay and increment options.",
+  "Sesli ve Görsel Uyarı": "Audio and Visual Alerts",
+  "Son beş saniyede sesli uyarı ve kırmızı yanıp sönme efekti.": "An audio warning and red flashing effect during the final five seconds.",
+  "Ekran Döndürme": "Screen Rotation",
+  "Karşılıklı oyunda ikinci oyuncu için ekranı 180° döndürme seçeneği.": "An option to rotate the screen 180° for the second player in face-to-face games.",
+  "Beş Renk Teması": "Five Color Themes",
+  "Mavi, yeşil, turuncu, mor ve karanlık arayüz seçenekleri.": "Blue, green, orange, purple, and dark interface themes.",
+  "Hamle Geçmişi": "Move History",
+  "Oyuncuların hamle sürelerini kaydedip tablo halinde gösterme.": "Records player move times and presents them in a table.",
+  "StatefulWidget tabanlı uygulama yapısı": "StatefulWidget-based application structure",
+  "Zaman Yönetimi": "Time Management",
+  "Asenkron sayaç ve oyun süresi yönetimi": "Asynchronous timer and game time management",
+  "Ses": "Audio",
+  "Oyun içi alarm ve uyarı sesleri": "In-game alarm and alert sounds",
+  "GitHub'da görüntüle": "View on GitHub",
+  "Native macOS Uygulaması": "Native macOS Application",
+  "Swift ve SwiftUI ile geliştirdiğim; görev takibi, verimlilik skoru ve istatistikleri bir araya getiren native macOS uygulaması.": "A native macOS app I built with Swift and SwiftUI, combining task tracking, productivity scores, and statistics.",
+  "Parallax ve glassmorphism detaylarına sahip native arayüz.": "A native interface with parallax and glassmorphism details.",
+  "Verimlilik Skoru": "Productivity Score",
+  "Görevlere göre 0–100 arası skor ve başarı rozetleri.": "A score from 0–100 based on tasks, plus achievement badges.",
+  "İstatistikler": "Statistics",
+  "Görev durumlarını takip etmek için gelişmiş gösterge paneli.": "An advanced dashboard for tracking task status.",
+  "Dil & Tema": "Language & Theme",
+  "Türkçe/İngilizce lokalizasyon ve otomatik karanlık mod.": "Turkish/English localization and automatic dark mode.",
+  "Native arayüz ve uygulama mantığı": "Native interface and application logic",
+  "Güvenlik": "Security",
+  "macOS uygulama izinleri ve izolasyon": "macOS application permissions and isolation",
+  "Sistem": "System",
+  "Hedef işletim sistemi": "Target operating system",
+  "Can sıkıntısından doğan bulmaca oyunu": "A puzzle game born out of boredom",
+  "Klasik 2048 mantığını 3'ün katlarıyla harmanlayan; 3, 6, 12… 3072 sayı dizisine ve 4×4 oyun alanına sahip çapraz platform bulmaca oyunu.": "A cross-platform puzzle game that blends classic 2048 with multiples of three—3, 6, 12… 3072—on a 4×4 board.",
+  "Öne Çıkan Özellikler": "Key Features",
+  "Gelişmiş Algoritma": "Advanced Algorithm",
+  "Bloklar arasındaki boşlukları atlayarak doğrudan ve kusursuz birleşme sağlar.": "Skips gaps between tiles to deliver direct and consistent merges.",
+  "Çapraz Platform": "Cross-Platform",
+  "Bilgisayarda klavye, mobilde dokunmatik kaydırma hareketleriyle oynanabilir.": "Playable with the keyboard on computers and touch swipe gestures on mobile.",
+  "Görsel ve Arayüz": "Visuals & Interface",
+  "Akıcı geçişler, partikül efektleri, sabit renkler ve sadeleştirilmiş bir oyun arayüzü.": "Smooth transitions, particle effects, fixed colors, and a streamlined game interface.",
+  "Kalıcı Skor": "Persistent High Score",
+  "LocalStorage ile cihazda saklanan ve oturumlar arasında kaybolmayan rekor sistemi.": "A high-score system stored on the device with LocalStorage and retained across sessions.",
+  "Oyun mantığı, Grid düzeni ve animasyonlar": "Game logic, Grid layout, and animations",
+  "Mobil Derleme": "Mobile Build",
+  "Web uygulamasını Android paketine dönüştürme": "Converting the web app into an Android package",
+  "Sürüm & Dağıtım": "Versioning & Distribution",
+  "Commit, tag ve release yönetimi": "Commit, tag, and release management"
+};
+
+const englishAttributes = {
+  "Ana navigasyon": "Main navigation",
+  "Hamza Bektaş ana sayfa": "Hamza Bektaş home page",
+  "Çalışma alanları": "Areas of work",
+  "Şu sıralar üzerinde çalıştıklarım": "What I'm currently working on",
+  "Google Play kapalı test erişimi": "Google Play closed test access",
+  "Notistan uygulama ikonu": "Notistan app icon",
+  "Teknolojiler": "Technologies",
+  "Age of Tycoon uygulama ikonu": "Age of Tycoon app icon",
+  "Online Pişti uygulama ikonu": "Online Pişti app icon",
+  "macOS To-Do App arayüz önizlemesi": "macOS To-Do App interface preview",
+  "Notistan detaylarını kapat": "Close Notistan details",
+  "Age of Tycoon detaylarını kapat": "Close Age of Tycoon details",
+  "Online Pişti detaylarını kapat": "Close Online Pişti details",
+  "Satranç Saati detaylarını kapat": "Close Chess Clock details",
+  "macOS To-Do App detaylarını kapat": "Close macOS To-Do App details",
+  "3048 detaylarını kapat": "Close 3048 details"
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("siteHeader");
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
+  const languageToggle = document.getElementById("languageToggle");
   const navAnchors = [...document.querySelectorAll(".nav__links a")];
   const modals = [...document.querySelectorAll(".project-modal")];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let lastFocusedElement = null;
+
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let currentNode = walker.nextNode();
+
+  while (currentNode) {
+    const parentTag = currentNode.parentElement?.tagName;
+    const sourceText = currentNode.nodeValue;
+    const normalizedText = sourceText.trim();
+
+    if (
+      parentTag !== "SCRIPT" &&
+      parentTag !== "STYLE" &&
+      normalizedText &&
+      englishText[normalizedText]
+    ) {
+      textNodes.push({
+        node: currentNode,
+        original: sourceText,
+        normalized: normalizedText
+      });
+    }
+
+    currentNode = walker.nextNode();
+  }
+
+  const translatedAttributes = [];
+  document.querySelectorAll("[aria-label], [alt]").forEach((element) => {
+    ["aria-label", "alt"].forEach((attribute) => {
+      const original = element.getAttribute(attribute);
+      if (original && englishAttributes[original]) {
+        translatedAttributes.push({ element, attribute, original });
+      }
+    });
+  });
+
+  const applyLanguage = (language) => {
+    const isEnglish = language === "en";
+    document.documentElement.lang = language;
+
+    textNodes.forEach(({ node, original, normalized }) => {
+      if (!isEnglish) {
+        node.nodeValue = original;
+        return;
+      }
+
+      const leadingWhitespace = original.match(/^\s*/)?.[0] ?? "";
+      const trailingWhitespace = original.match(/\s*$/)?.[0] ?? "";
+      node.nodeValue = `${leadingWhitespace}${englishText[normalized]}${trailingWhitespace}`;
+    });
+
+    translatedAttributes.forEach(({ element, attribute, original }) => {
+      element.setAttribute(attribute, isEnglish ? englishAttributes[original] : original);
+    });
+
+    document.title = isEnglish
+      ? "Hamza Bektaş — Personal Software Portfolio"
+      : "Hamza Bektaş — Kişisel Yazılım Portföyü";
+
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.setAttribute(
+        "content",
+        isEnglish
+          ? "Hamza Bektaş's personal software portfolio featuring web, desktop, mobile applications, and game projects."
+          : "Hamza Bektaş'ın kişisel yazılım portföyü; web, masaüstü, mobil uygulamalar ve oyun projeleri."
+      );
+    }
+
+    languageToggle.setAttribute(
+      "aria-label",
+      isEnglish ? "Türkçeye geç" : "Switch to English"
+    );
+
+    try {
+      localStorage.setItem("portfolio-language", language);
+    } catch {
+      // The language still works when storage is unavailable.
+    }
+  };
+
+  let initialLanguage = "tr";
+  try {
+    initialLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "tr";
+  } catch {
+    initialLanguage = "tr";
+  }
+  applyLanguage(initialLanguage);
+
+  languageToggle.addEventListener("click", () => {
+    applyLanguage(document.documentElement.lang === "tr" ? "en" : "tr");
+  });
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
