@@ -763,6 +763,56 @@ img {
   filter: blur(130px);
 }
 
+.testing-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  border: 1px solid rgba(255, 189, 102, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 189, 102, 0.045);
+}
+
+.testing-note__label {
+  display: block;
+  margin-bottom: 7px;
+  color: #ffbd66;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.testing-note p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
+.testing-note > a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding-inline: 15px;
+  border: 1px solid rgba(255, 189, 102, 0.22);
+  border-radius: 9px;
+  color: #ffd49a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.testing-note > a:hover {
+  border-color: rgba(255, 189, 102, 0.38);
+  background: rgba(255, 189, 102, 0.07);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -802,7 +852,7 @@ img {
 }
 
 .project-card--legacy {
-  grid-column: span 3;
+  grid-column: span 2;
   min-height: 420px;
   background: rgba(17, 22, 31, 0.7);
 }
@@ -838,6 +888,16 @@ img {
 
 .project-card__icon--preview {
   object-position: left center;
+}
+
+.project-card__icon--3048,
+.modal-project-icon--3048 {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent),
+    #312652;
+  color: #d6c7ff;
+  font-size: 0.8rem;
+  letter-spacing: -0.06em;
 }
 
 .status {
@@ -993,8 +1053,24 @@ img {
   z-index: 1;
 }
 
-.contact-panel__actions > .button {
-  width: 100%;
+.email-address {
+  margin: 0;
+  padding: 18px 0 22px;
+  border-block: 1px solid var(--line);
+  color: var(--text);
+  font-size: clamp(0.86rem, 1.4vw, 1rem);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.email-address span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .social-links {
@@ -1409,6 +1485,12 @@ tbody tr:last-child td {
 
   .contact-panel {
     grid-template-columns: 1fr;
+  }
+
+  .testing-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 

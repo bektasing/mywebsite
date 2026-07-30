@@ -65,7 +65,7 @@
 
           <dl class="hero__metrics reveal" aria-label="Çalışma alanları">
             <div>
-              <dt>05</dt>
+              <dt>06</dt>
               <dd>Portföy projesi</dd>
             </div>
             <div>
@@ -145,9 +145,22 @@
           </div>
           <p>
             Kapalı testteki yeni uygulamalarımın yanında, öğrenme sürecimde
-            geliştirdiğim eski projelerimi de burada tutuyorum.
+            geliştirdiğim ve bazen yalnızca can sıkıntısından yaptığım projeleri de burada tutuyorum.
           </p>
         </div>
+
+        <aside class="testing-note reveal" aria-label="Google Play kapalı test erişimi">
+          <div>
+            <span class="testing-note__label">Google Play · Kapalı test erişimi</span>
+            <p>
+              Notistan, Age of Tycoon ve Online Pişti'nin Play Store sayfalarını
+              görebilmek için önce test grubuna, Play Store'da kullandığın aynı Google hesabıyla katılman gerekiyor.
+            </p>
+          </div>
+          <a href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">
+            Önce test grubuna katıl <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
 
         <div class="projects-grid">
           <article class="project-card project-card--notistan reveal">
@@ -244,6 +257,25 @@
               <span aria-hidden="true">↗</span>
             </button>
           </article>
+
+          <article class="project-card project-card--legacy project-card--3048 reveal">
+            <div class="project-card__top">
+              <div class="project-card__icon project-card__icon--3048" aria-hidden="true">3048</div>
+              <span class="status status--complete"><i></i> Açık kaynak</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 06</span>
+              <h3>3048 <small>2048, ama 3'ün katlarıyla</small></h3>
+              <p>Can sıkıntısından yaptığım; klasik 2048 mantığını 3, 6, 12… 3072 sayı dizisiyle yeniden yorumlayan bulmaca oyunu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Capacitor</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="game3048Modal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
         </div>
       </div>
     </section>
@@ -256,7 +288,10 @@
           <p>Yeni projeler, ürün geliştirme veya yalnızca merhaba demek için bana ulaşabilirsin.</p>
         </div>
         <div class="contact-panel__actions">
-          <a class="button button--primary" href="mailto:bektashamza001@gmail.com">E-posta gönder <span aria-hidden="true">↗</span></a>
+          <p class="email-address">
+            <span>E-posta</span>
+            bektashamza001@gmail.com
+          </p>
           <div class="social-links">
             <a href="https://github.com/bektasing" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
             <a href="https://www.linkedin.com/in/hamza-bektas/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
@@ -548,6 +583,60 @@
 
         <div class="project-modal__actions">
           <a class="button button--primary" href="https://github.com/bektasing/to-do-app" target="_blank" rel="noopener noreferrer">GitHub'da görüntüle <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-modal" id="game3048Modal" aria-labelledby="game3048Title">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <div class="modal-project-icon modal-project-icon--3048" aria-hidden="true">3048</div>
+          <div>
+            <span class="status status--complete"><i></i> Açık kaynak</span>
+            <h2 id="game3048Title">3048</h2>
+            <p>Can sıkıntısından doğan bulmaca oyunu</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="3048 detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Klasik 2048 mantığını 3'ün katlarıyla harmanlayan; 3, 6, 12… 3072 sayı dizisine ve 4×4 oyun alanına sahip çapraz platform bulmaca oyunu.</p>
+
+        <section class="modal-section" aria-labelledby="game3048Features">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="game3048Features">Öne Çıkan Özellikler</h3>
+            <ul class="feature-grid">
+              <li><strong>Gelişmiş Algoritma</strong><span>Bloklar arasındaki boşlukları atlayarak doğrudan ve kusursuz birleşme sağlar.</span></li>
+              <li><strong>Çapraz Platform</strong><span>Bilgisayarda klavye, mobilde dokunmatik kaydırma hareketleriyle oynanabilir.</span></li>
+              <li><strong>Görsel ve Arayüz</strong><span>Akıcı geçişler, partikül efektleri, sabit renkler ve sadeleştirilmiş bir oyun arayüzü.</span></li>
+              <li><strong>Kalıcı Skor</strong><span>LocalStorage ile cihazda saklanan ve oturumlar arasında kaybolmayan rekor sistemi.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="game3048Stack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="game3048Stack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Frontend</th><td>HTML5, CSS3 &amp; Vanilla JavaScript</td><td>Oyun mantığı, Grid düzeni ve animasyonlar</td></tr>
+                  <tr><th scope="row">Mobil Derleme</th><td>Node.js, Capacitor &amp; Android Studio</td><td>Web uygulamasını Android paketine dönüştürme</td></tr>
+                  <tr><th scope="row">Sürüm &amp; Dağıtım</th><td>Git &amp; GitHub</td><td>Commit, tag ve release yönetimi</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://github.com/bektasing/3048" target="_blank" rel="noopener noreferrer">GitHub'da görüntüle <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
