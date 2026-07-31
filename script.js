@@ -152,16 +152,16 @@ const englishText = {
   "Web uygulamasını Android paketine dönüştürme": "Converting the web app into an Android package",
   "Sürüm & Dağıtım": "Versioning & Distribution",
   "Commit, tag ve release yönetimi": "Commit, tag, and release management",
-  "Cross-Platform Note & To-Do": "Çapraz Platform Not & Yapılacaklar",
-  "Mobile Idle / Tycoon Game": "Mobil Idle / Tycoon Oyunu",
-  "Cross-Platform Multiplayer Card Game": "Çapraz Platform Çok Oyunculu Kart Oyunu",
+  "Cross-Platform Note & To-Do": "Cross-Platform Note & To-Do",
+  "Mobile Idle / Tycoon Game": "Mobile Idle / Tycoon Game",
+  "Cross-Platform Multiplayer Card Game": "Cross-Platform Multiplayer Card Game",
   "Flutter Android Projesi": "Flutter Android Project",
   "Native macOS Uygulaması": "Native macOS Application",
   "Can sıkıntısından doğan bulmaca oyunu": "A puzzle game born out of boredom",
-  "Modern UI": "Modern Arayüz",
-  "Kanban Boards": "Kanban Panoları",
-  "Real-time Collaboration": "Gerçek Zamanlı İşbirliği",
-  "Smart Sync": "Akıllı Senkronizasyon",
+  "Modern UI": "Modern UI",
+  "Kanban Boards": "Kanban Boards",
+  "Real-time Collaboration": "Real-time Collaboration",
+  "Smart Sync": "Smart Sync",
   "Dil Desteği": "Language Support",
   "Çok Oyunculu": "Multiplayer",
   "Entegrasyonlar": "Integrations",
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
   while (currentNode) {
     const parentTag = currentNode.parentElement?.tagName;
     const sourceText = currentNode.nodeValue;
-    const normalizedText = sourceText.trim();
+    const normalizedText = sourceText.trim().replace(/\s+/g, " ");
 
     if (
       parentTag !== "SCRIPT" &&
