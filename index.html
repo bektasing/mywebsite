@@ -171,13 +171,51 @@
         </aside>
 
         <div class="projects-grid">
+          <article class="project-card project-card--fruitdefense reveal">
+            <div class="project-card__top">
+              <img class="project-card__icon" src="images/fruit-defense.png" alt="Fruit Defense uygulama ikonu" width="512" height="512">
+              <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 01</span>
+              <h3>Fruit Defense <small>Mobile Tower Defense Game</small></h3>
+              <p>Meyve temalı savunma kuleleriyle bahçeyi böcek istilalarına karşı koruduğun, bölge bazlı ilerleme ve stratejik kule yerleşimine odaklanan mobil tower defense oyunu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>Godot 4</span><span>GDScript</span><span>Android</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="fruitDefenseModal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <article class="project-card project-card--dustoff reveal">
+            <div class="project-card__top">
+              <img class="project-card__icon" src="images/dust-off.png" alt="Dust Off uygulama ikonu" width="512" height="512">
+              <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number">PROJECT / 02</span>
+              <h3>Dust Off <small>Mobile Archaeology &amp; Restoration Game</small></h3>
+              <p>Hassas restorasyon araçlarını kullanarak toz ve kir altında kalmış tarihi eserleri ortaya çıkardığın, dikkat ve kontrollü temizlik üzerine kurulu mobil arkeoloji ve restorasyon oyunu.</p>
+              <div class="tags" aria-label="Teknolojiler">
+                <span>Godot 4</span><span>GDScript</span><span>Android</span>
+              </div>
+            </div>
+            <button class="project-card__action" type="button" data-open-modal="dustOffModal">
+              <span>Detaylar için tıkla</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+
           <article class="project-card project-card--notistan reveal">
             <div class="project-card__top">
               <img class="project-card__icon" src="images/notistan.png" alt="Notistan uygulama ikonu" width="512" height="512">
               <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 01</span>
+              <span class="project-card__number">PROJECT / 03</span>
               <h3>Notistan <small>Cross-Platform Note &amp; To-Do</small></h3>
               <p>Tauri, Capacitor ve Supabase ile geliştirilmiş; anlık senkronizasyon özellikli, minimalist bir verimlilik platformu.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -196,7 +234,7 @@
               <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 02</span>
+              <span class="project-card__number">PROJECT / 04</span>
               <h3>Age of Tycoon</h3>
               <p>Çoklu dil destekli ve gelişmiş otomasyon sistemlerine sahip mobil idle / tycoon oyunu.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -215,7 +253,7 @@
               <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 03</span>
+              <span class="project-card__number">PROJECT / 05</span>
               <h3>Online Pişti</h3>
               <p>Klasik pişti deneyimini modern web teknolojileri ve mobil entegrasyon ile buluşturan çok oyunculu kart oyunu.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -234,7 +272,7 @@
               <span class="status status--complete"><i></i> Tamamlandı</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 04</span>
+              <span class="project-card__number">PROJECT / 06</span>
               <h3>Satranç Saati <small>Chess Timer</small></h3>
               <p>Flutter ile kendimi geliştirmek için yazdığım, farklı zaman modlarına sahip Android satranç saati.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -253,7 +291,7 @@
               <span class="status status--complete"><i></i> Tamamlandı</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 05</span>
+              <span class="project-card__number">PROJECT / 07</span>
               <h3>macOS To-Do App</h3>
               <p>Swift ve SwiftUI ile geliştirilmiş, istatistik paneline sahip native bir görev yönetim uygulaması.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -272,7 +310,7 @@
               <span class="status status--complete"><i></i> Açık kaynak</span>
             </div>
             <div class="project-card__body">
-              <span class="project-card__number">PROJECT / 06</span>
+              <span class="project-card__number">PROJECT / 08</span>
               <h3>3048 <small>2048, ama 3'ün katlarıyla</small></h3>
               <p>Can sıkıntısından yaptığım; klasik 2048 mantığını 3, 6, 12… 3072 sayı dizisiyle yeniden yorumlayan bulmaca oyunu.</p>
               <div class="tags" aria-label="Teknolojiler">
@@ -317,6 +355,122 @@
       <a href="#home">Yukarı dön <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
+
+  <dialog class="project-modal" id="fruitDefenseModal" aria-labelledby="fruitDefenseTitle">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <img src="images/fruit-defense.png" alt="" width="512" height="512">
+          <div>
+            <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
+            <h2 id="fruitDefenseTitle">Fruit Defense</h2>
+            <p>Mobile Tower Defense Game</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Fruit Defense detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Meyve temalı savunma kuleleriyle bahçeyi böcek istilalarına karşı koruduğun, bölge bazlı ilerleme ve stratejik kule yerleşimine odaklanan mobil tower defense oyunu.</p>
+
+        <section class="modal-section" aria-labelledby="fruitDefenseFeatures">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="fruitDefenseFeatures">Oyun Özellikleri</h3>
+            <ul class="feature-grid">
+              <li><strong>Fruit Towers</strong><span>Her biri farklı savaş rolüne sahip meyve temalı savunma kuleleriyle stratejik savunmalar oluştur.</span></li>
+              <li><strong>Strategic Tower Defense</strong><span>Kule yerleşimi, yükseltmeler ve farklı saldırı tiplerini doğru kullanarak değişen düşman dalgalarına karşı koy.</span></li>
+              <li><strong>Region Progression</strong><span>Farklı temalara, rotalara ve zorluk seviyelerine sahip bölgelerde ilerleyerek yeni mücadelelere ulaş.</span></li>
+              <li><strong>Upgrade System</strong><span>Savunma kulelerini oyun sırasında geliştirerek hasar, saldırı hızı ve savaş etkinliğini artır.</span></li>
+              <li><strong>Multiple Enemy Types</strong><span>Farklı hız, dayanıklılık ve davranışlara sahip böcek düşmanlarına karşı uygun kule kombinasyonlarını kullan.</span></li>
+              <li><strong>Multi-language Support</strong><span>Türkçe, İngilizce ve İspanyolca arayüz desteği.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="fruitDefenseStack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="fruitDefenseStack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Game Engine</th><td>Godot 4</td><td>Oyun motoru, sahne sistemi ve oyun döngüsü</td></tr>
+                  <tr><th scope="row">Core</th><td>GDScript</td><td>Gameplay sistemleri ve uygulama mantığı</td></tr>
+                  <tr><th scope="row">Platform</th><td>Android</td><td>Mobil dağıtım ve Google Play yayını</td></tr>
+                  <tr><th scope="row">Architecture</th><td>Data-driven Systems</td><td>Region, wave ve gameplay içeriklerinin yönetimi</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://play.google.com/store/apps/details?id=com.bektasing.fruitdefense" target="_blank" rel="noopener noreferrer">Play Store'da teste katıl <span aria-hidden="true">↗</span></a>
+          <a class="button button--text" href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">Kapalı test grubuna katıl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-modal" id="dustOffModal" aria-labelledby="dustOffTitle">
+    <div class="project-modal__frame">
+      <div class="project-modal__header">
+        <div class="project-modal__identity">
+          <img src="images/dust-off.png" alt="" width="512" height="512">
+          <div>
+            <span class="status status--testing"><i></i> Kapalı test · Teste açık</span>
+            <h2 id="dustOffTitle">Dust Off</h2>
+            <p>Mobile Archaeology &amp; Restoration Game</p>
+          </div>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Dust Off detaylarını kapat">×</button>
+      </div>
+
+      <div class="project-modal__content">
+        <p class="project-modal__lead">Hassas restorasyon araçlarını kullanarak toz ve kir altında kalmış tarihi eserleri ortaya çıkardığın, dikkat ve kontrollü temizlik üzerine kurulu mobil arkeoloji ve restorasyon oyunu.</p>
+
+        <section class="modal-section" aria-labelledby="dustOffFeatures">
+          <span class="modal-section__index">01</span>
+          <div>
+            <h3 id="dustOffFeatures">Oyun Özellikleri</h3>
+            <ul class="feature-grid">
+              <li><strong>Artifact Restoration</strong><span>Toz ve kir altında kalmış tarihi objeleri dikkatli şekilde temizleyerek gerçek görünümlerini ortaya çıkar.</span></li>
+              <li><strong>Multiple Tools</strong><span>Farklı temizlik durumlarına uygun Pick, Brush ve Air araçlarını kullanarak restorasyonu kontrollü şekilde gerçekleştir.</span></li>
+              <li><strong>Precision Gameplay</strong><span>Eserin durumunu korurken mümkün olan en iyi restorasyon sonucuna ulaşmaya çalış.</span></li>
+              <li><strong>Discovery Progression</strong><span>Yeni eserler ve seviyeler keşfederek restorasyon koleksiyonunu ilerlet.</span></li>
+              <li><strong>Performance Tracking</strong><span>Tamamlama süresi, keşfedilen bölüm ve restorasyon performansı gibi sonuçlarla kişisel performansını takip et.</span></li>
+              <li><strong>Replayable Levels</strong><span>Daha iyi süre ve sonuç elde etmek için tamamlanan restorasyonları tekrar oynayabil.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="modal-section" aria-labelledby="dustOffStack">
+          <span class="modal-section__index">02</span>
+          <div>
+            <h3 id="dustOffStack">Teknoloji Yığını</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th scope="col">Katman</th><th scope="col">Teknoloji</th><th scope="col">Rol</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Game Engine</th><td>Godot 4</td><td>Oyun motoru, sahne sistemi ve render</td></tr>
+                  <tr><th scope="row">Core</th><td>GDScript</td><td>Gameplay sistemleri ve uygulama mantığı</td></tr>
+                  <tr><th scope="row">Backend</th><td>Supabase</td><td>Liderlik tablosu ve oyuncu veritabanı</td></tr>
+                  <tr><th scope="row">Platform</th><td>Android</td><td>Mobil dağıtım ve Play Store yayını</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="project-modal__actions">
+          <a class="button button--primary" href="https://play.google.com/store/apps/details?id=com.bektasing.dustoff" target="_blank" rel="noopener noreferrer">Play Store'da teste katıl <span aria-hidden="true">↗</span></a>
+          <a class="button button--text" href="https://groups.google.com/g/testers-community?pli=1" target="_blank" rel="noopener noreferrer">Kapalı test grubuna katıl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <dialog class="project-modal" id="notistanModal" aria-labelledby="notistanTitle">
     <div class="project-modal__frame">
