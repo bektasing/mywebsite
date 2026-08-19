@@ -391,9 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.setAttribute(attribute, isEnglish ? englishAttributes[original] : original);
     });
 
-    document.title = isEnglish
-      ? "Hamza Bektaş — Personal Software Portfolio"
-      : "Hamza Bektaş — Kişisel Yazılım Portföyü";
+    document.title = "Hamza Bektaş | Software & Game Developer";
 
     const description = document.querySelector('meta[name="description"]');
     if (description) {
