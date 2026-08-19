@@ -553,32 +553,36 @@ html[lang="en"] .language-toggle__option--en {
 }
 
 .personal-card__apps {
-  display: grid;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 22px;
+  padding-block: 16px;
   border-block: 1px solid var(--line);
 }
 
-.personal-card__apps span {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  min-height: 54px;
-  border-bottom: 1px solid var(--line);
+.personal-card__apps-label {
   color: var(--text-soft);
   font-size: 0.72rem;
   font-weight: 500;
 }
 
-.personal-card__apps span:last-child {
-  border: 0;
+.personal-card__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.personal-card__apps img {
-  width: 30px;
-  height: 30px;
+.personal-card__icons img {
+  width: 34px;
+  height: 34px;
   border-radius: 7px;
   object-fit: cover;
+  transition: transform 150ms ease;
+}
+
+.personal-card__icons img:hover {
+  transform: translateY(-2px);
 }
 
 .personal-card > a {
